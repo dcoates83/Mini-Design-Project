@@ -1,0 +1,85 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body{
+ font-family: 'Poppins', sans-serif;
+}
+ul{
+ list-style: none;
+}
+a{
+ text-decoration: none;
+ color: inherit;
+}
+
+/* nav bar */
+.nav-items{
+ display: flex;
+ padding: 1em;
+ justify-content: center;
+}
+.nav-item{
+padding: 0 1em;
+}
+/* hero img */
+.container{
+ position: relative;
+ height: 90vh;
+ width: 100%;
+}
+.day{
+ background: url(./assets/images/pexels-roman-odintsov-4553618.jpg);
+ background-size: cover;
+}
+
+.hero-header{
+ top: 20vh;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%, 0);
+ display: grid;
+}
+.header-text{
+font-size: 2.625rem;
+}
+
+.btn{
+font-family: 'work sans',sans-serif;
+ position: relative;
+ padding: 5px 10px;
+ font-size: 20px;
+ color: #505050;
+ border-radius: 5px;
+ box-shadow: 3px 3px 5px #777;
+ letter-spacing: 1px;
+}
+.btn:hover{
+ background-color:#634122 ;
+ color: white;
+}
+
+.hero-sub-header{
+top: 30vh;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%, 0);
+font-size: 2.625rem;
+}
+
+/* Grid layout */
+.parent-grid {
+ /* object-fit: contain; */
+ height: 90vh;
+ display: grid; 
+ grid-template-columns: 1fr 1fr 1fr; 
+ grid-template-rows: 1fr 1fr 1fr 1fr; 
+ gap: 10px 10px; 
+ grid-template-areas: 
+   ". . ."
+   ". . ."
+   ". . ."
+   ". . ."; 
+}
