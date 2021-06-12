@@ -1,3 +1,4 @@
+/* Reset */
 * {
  padding: 0;
  margin: 0;
@@ -7,6 +8,7 @@
 body{
  font-family: 'Poppins', sans-serif;
 }
+
 ul{
  list-style: none;
 }
@@ -15,24 +17,47 @@ a{
  color: inherit;
 }
 
-/* nav bar */
+/* nav bar / footer styles*/
+.nav-bar{
+ background-color: #eee;
+ 
+}
 .nav-items{
  display: flex;
+ align-content: center;
  padding: 1em;
  justify-content: center;
+ font-size: 4.5vw;
+}
+@media (min-width:400px) {
+ .nav-items{
+  font-size: 4vw;
+ }
+}
+@media (min-width:500px) {
+ .nav-items{
+  font-size: 3vw;
+ }
+}
+@media (min-width:700px) {
+ .nav-items{
+  font-size: 2.25vw;
+ }
+}
+@media (min-width:900px) {
+ .nav-items{
+  font-size: 1.75vw;
+ }
 }
 .nav-item{
 padding: 0 1em;
 }
-/* hero img */
+/*  index page*/
 .container{
  position: relative;
- height: 90vh;
+ height: 87vh;
  width: 100%;
-}
-.day{
- background: url(./assets/images/pexels-roman-odintsov-4553618.jpg);
- background-size: cover;
+
 }
 
 .hero-header{
@@ -42,24 +67,18 @@ padding: 0 1em;
  transform: translate(-50%, 0);
  display: grid;
 }
+
+.hero-img{
+ position: absolute;
+ width: 100%;
+ height: 90vh;
+ object-fit: cover;
+ z-index: -1;
+}
 .header-text{
 font-size: 2.625rem;
 }
 
-.btn{
-font-family: 'work sans',sans-serif;
- position: relative;
- padding: 5px 10px;
- font-size: 20px;
- color: #505050;
- border-radius: 5px;
- box-shadow: 3px 3px 5px #777;
- letter-spacing: 1px;
-}
-.btn:hover{
- background-color:#634122 ;
- color: white;
-}
 
 .hero-sub-header{
 top: 30vh;
@@ -69,17 +88,149 @@ top: 30vh;
 font-size: 2.625rem;
 }
 
-/* Grid layout */
+/* Grid layout on gallery*/
 .parent-grid {
- /* object-fit: contain; */
  height: 90vh;
  display: grid; 
- grid-template-columns: 1fr 1fr 1fr; 
- grid-template-rows: 1fr 1fr 1fr 1fr; 
- gap: 10px 10px; 
- grid-template-areas: 
-   ". . ."
-   ". . ."
-   ". . ."
-   ". . ."; 
+ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+ gap: 0 10px; 
+ justify-items: center;
+ padding: .5em;
+
 }
+@media (min-width:450px) {
+.parent-grid {
+gap: 0 20px;
+padding: 2em;
+ }
+}
+.grid-item{
+ object-fit: cover;
+ height: 13.5rem;
+ width: 13.5rem;
+ padding: 1em;
+ border-radius: 25px;
+}
+@media (min-width:1200px){
+ .parent-grid{
+ 
+   grid-template-columns: 1fr 1fr 1fr 1fr; 
+   grid-template-rows: 1fr 1fr 1fr ; 
+  
+ }
+ .grid-item{
+ 
+  height: 17.5rem;
+  width: 17.5rem;
+ 
+ }
+}
+/* Contact page  */
+.page {
+ width: 90vw;
+ max-width: 1120px;
+ margin: 1em auto;
+ display: flex;
+}
+@media (min-width:300px) {
+ .page {
+  margin-top: 7em ;
+  margin-bottom: 4em ;
+  margin-left:  auto;
+  margin-right:  auto;
+ }
+}
+@media (min-width:600px) {
+ .page {
+  margin: 2em auto;
+ }
+}
+@media (min-width:900px) {
+ .page {
+  margin: 1em auto;
+ }
+}
+.contact-page {
+ display: grid;
+ gap: 2rem 3rem;
+ padding-bottom: 3rem;
+ align-content: center;
+}
+
+
+@media screen and (min-width: 992px) {
+ .contact-page {
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+ }
+}
+
+
+/* form */
+input,
+textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  background: #fafbfc;
+  border-color: transparent;
+  border: 1px solid  #dbe0ea;
+}
+.form {
+ width: 100%;
+ background: #fff;
+ border-radius: 0.25rem;
+ box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+ padding: 2rem 2.5rem;
+}
+.form-row {
+ margin-bottom: 1rem;
+}
+textarea {
+ width: 100%;
+ height: 7rem;
+}
+
+/* button styling */
+.btn{
+ font-family: 'work sans',sans-serif;
+  
+  font-size: 20px;
+  
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #777;
+  letter-spacing: 1px;
+ }
+ 
+ .block {
+  width: 100%;
+ }
+
+.btn {
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  color: #fff;
+  background: #645cff;
+  border: none;
+  border-radius: 0.25rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease-in-out all;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #4640b3;
+  box-shadow:    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+/* contact page text */
+p {
+ margin: 0;
+ margin-bottom: 1rem;
+ max-width: 40em;
+}
+
